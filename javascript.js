@@ -49,10 +49,24 @@ function playGame() {
   }
 
   
+  function getTotalScore (x, z) {
+    
+    
+    if (x>z) { return console.log('You win against computer! Nice')}
+    else if(x<z) { return console.log('Computer beat you AHAH!!!')}
+    else {return console.log('Well...thats a tie, boooring')}
+    }
+    
+
   console.log(`Your score is ${humanScore}`)
   console.log(`Computer score is ${computerScore}`)
 
+
+  getTotalScore(humanScore, computerScore)
+
+
 }
+
 
 playGame()
 
