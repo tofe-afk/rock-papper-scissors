@@ -18,12 +18,6 @@ rockBtn.addEventListener("click", sdf)
 paperBtn.addEventListener("click", dfs)
 scissorsBtn.addEventListener("click", sfd)
 
-/*function createTextRock() {
-  const newDiv = document.createElement('div')
-  const message= document.createTextNode(`It's a tie! You both picked ${humanChoice}`)
-  newDiv.appendChild(message)
-  currentDiv = document.body.insertBefore(newDiv, currentDiv)
-}*/
 
 
 function getComputerChoice() {
@@ -75,14 +69,14 @@ function playGame() {
 
     if(humanChoices === computerChoice) {
       createTextTie();
-       // return console.log(`It's a tie! You both picked ${humanChoices}`)
+       
     } else if 
         ((humanChoices == 'rock' && computerChoice == 'scissors') ||
         (humanChoices == 'paper' && computerChoice == 'rock') ||
         (humanChoices == 'scissors' && computerChoice == 'paper')) {
-            humanScore++; createTextWin(); //return console.log(`You win! ${humanChoices} beats ${computerChoice}`)
+            humanScore++; createTextWin();
     } else {
-        computerScore++; createTextLose(); //return console.log(`You loose! ${computerChoice} beats ${humanChoices}`)
+        computerScore++; createTextLose();
         }
     
       }
