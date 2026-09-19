@@ -125,4 +125,4 @@ button.addEventListener('click', playGame)
 
 
 /*last thing to display players score on page, going to stop, spent enough days on the project
-should be easy enough, create div with text in html and create function to change score with embedded
+should be easy enough, create div with text in html and create function to change score with embedded*/
