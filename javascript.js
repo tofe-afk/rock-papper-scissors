@@ -5,6 +5,7 @@ let rockBtn = document.querySelector('.rock')
 let paperBtn= document.querySelector('.paper')
 let scissorsBtn = document.querySelector('.scissors')
 let currentDiv = document.querySelector('#results')
+let currentScores = document.querySelector('#scores')
 
 let humanChoice
 
@@ -18,6 +19,19 @@ rockBtn.addEventListener("click", sdf)
 paperBtn.addEventListener("click", dfs)
 scissorsBtn.addEventListener("click", sfd)
 
+function displayScoresHuman () {
+  const newDiv = document.createElement('p')
+  const message= document.createTextNode(`Your score is ${humanScore}`)
+  newDiv.appendChild(message)
+  currentDiv = document.body.appendChild(newDiv, message)
+}
+
+function displayScoresComputer() {
+  const newDiv = document.createElement('p')
+  const message = document.createTextNode(`Computer score is ${computerScore}`)
+  newDiv.appendChild(message)
+  currentDiv = document.body.appendChild(newDiv, message)
+}
 
 
 function getComputerChoice() {
@@ -100,9 +114,10 @@ function playGame() {
     
 
 
-
-  console.log(`Your score is ${humanScore}`)
-  console.log(`Computer score is ${computerScore}`)
+    displayScoresHuman ()
+    displayScoresComputer()
+  //console.log(`Your score is ${humanScore}`)
+ // console.log(`Computer score is ${computerScore}`)
 
 
 
